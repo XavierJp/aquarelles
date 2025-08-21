@@ -1,0 +1,71 @@
+.app {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 0rem 5rem;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.app-header h1 {
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 3.5rem;
+  font-weight: bolder;
+  color: white;
+  margin-bottom: 0.25rem;
+  text-shadow: 1px 1px 3px rgba(5, 0, 53, 0.5);
+  letter-spacing: 2px;
+}
+
+.app-header p {
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 300;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  opacity: 0.95;
+}
+
+.app-main {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    top: 15px;
+    left: 15px;
+    padding: 1rem 1.5rem;
+  }
+  
+  .app-header h1 {
+    font-size: 2.8rem;
+  }
+  
+  .app-header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    top: 10px;
+    left: 10px;
+    padding: 0.75rem 1.25rem;
+  }
+  
+  .app-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .app-header p {
+    font-size: 0.9rem;
+  }
+}

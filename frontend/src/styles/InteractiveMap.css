@@ -1,0 +1,143 @@
+.map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+.custom-marker {
+  background: transparent;
+  border: none;
+}
+
+.marker-pin {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 50% 0;
+  background: #2c5f6f;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 50%;
+  top: 50%;
+  margin: -15px 0 0 -15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.marker-pin:hover {
+  transform: rotate(-45deg) scale(1.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.marker-icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(45deg);
+  color: white;
+  font-size: 12px;
+}
+
+.popup-content {
+  min-width: 250px;
+  padding: 0.5rem;
+}
+
+.popup-content h4 {
+  margin: 0 0 0.5rem 0;
+  color: #2c5f6f;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.popup-content p {
+  margin: 0 0 0.75rem 0;
+  color: #5a8a9a;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.popup-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.category {
+  background: rgba(44, 95, 111, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  color: #2c5f6f;
+  font-weight: 500;
+}
+
+.duration {
+  color: #7aa3b3;
+  font-weight: 500;
+}
+
+.listen-button {
+  width: 100%;
+  background: #2c5f6f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.listen-button:hover {
+  background: #1e4752;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(44, 95, 111, 0.3);
+}
+
+.listen-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(44, 95, 111, 0.3);
+}
+
+/* Leaflet popup customization */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(44, 95, 111, 0.2);
+  border: 1px solid rgba(44, 95, 111, 0.1);
+}
+
+.leaflet-popup-tip {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    margin: 0.5rem;
+    border-radius: 8px;
+  }
+  
+  .popup-content {
+    min-width: 200px;
+  }
+  
+  .popup-content h4 {
+    font-size: 1rem;
+  }
+  
+  .popup-content p {
+    font-size: 0.85rem;
+  }
+}
